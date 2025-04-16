@@ -1,974 +1,588 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zeshaan Qadir Real Estate Brand Style Guide</title>
+    <title>Real Estate Brand Style Proposal for Zeshaan Qadir</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --navy-blue: #1A2B4A;
-            --gold: #D4AF36;
-            --blood-orange: #E4572E;
-            --teal: #2F4F4F;
-            --black: #000000;
-            --dark-gray: #333333;
-            --light-gray: #EEEEEE;
-            --white: #FFFFFF;
-        }
-        
         body {
-            font-family: 'Lato', sans-serif;
-            color: var(--dark-gray);
-            line-height: 1.6;
+            font-family: 'Open Sans', sans-serif;
+            color: #333;
+            background-color: #f9f9f9;
         }
-        
-        h1, h2, h3, h4, h5, h6 {
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            letter-spacing: 1px;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .title {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 44px;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+
+        .subtitle {
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 300;
+            font-size: 16px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+
+        .section-title {
             font-family: 'Playfair Display', serif;
             font-weight: 600;
-        }
-        
-        .navy-bg { background-color: var(--navy-blue); }
-        .gold-bg { background-color: var(--gold); }
-        .blood-orange-bg { background-color: var(--blood-orange); }
-        .teal-bg { background-color: var(--teal); }
-        .black-bg { background-color: var(--black); }
-        .dark-gray-bg { background-color: var(--dark-gray); }
-        .light-gray-bg { background-color: var(--light-gray); }
-        .white-bg { background-color: var(--white); }
-        
-        .navy-text { color: var(--navy-blue); }
-        .gold-text { color: var(--gold); }
-        .blood-orange-text { color: var(--blood-orange); }
-        .teal-text { color: var(--teal); }
-        .black-text { color: var(--black); }
-        .dark-gray-text { color: var(--dark-gray); }
-        .light-gray-text { color: var(--light-gray); }
-        .white-text { color: var(--white); }
-        
-        .divider {
-            height: 1px;
-            background-color: var(--light-gray);
-            margin: 2rem 0;
-        }
-        
-        .color-swatch {
-            height: 100px;
-            width: 100%;
-            border-radius: 8px;
-            margin-bottom: 10px;
-            transition: all 0.3s ease;
-        }
-        
-        .color-swatch:hover {
-            transform: scale(1.05);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-        }
-        
-        .btn-primary {
-            background-color: var(--blood-orange);
-            color: white;
-            padding: 0.75rem 1.5rem;
-            border-radius: 4px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            display: inline-block;
-        }
-        
-        .btn-primary:hover {
-            background-color: #c24022;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-        
-        .btn-secondary {
-            background-color: transparent;
-            color: var(--navy-blue);
-            padding: 0.75rem 1.5rem;
-            border-radius: 4px;
-            font-weight: 600;
-            border: 2px solid var(--navy-blue);
-            transition: all 0.3s ease;
-            display: inline-block;
-        }
-        
-        .btn-secondary:hover {
-            background-color: var(--navy-blue);
-            color: white;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-        
-        .btn-gold {
-            background-color: var(--gold);
-            color: white;
-            padding: 0.75rem 1.5rem;
-            border-radius: 4px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            display: inline-block;
-        }
-        
-        .btn-gold:hover {
-            background-color: #b8992e;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-        
-        .form-input {
-            display: block;
-            width: 100%;
-            padding: 0.75rem;
-            border: 1px solid var(--light-gray);
-            border-radius: 4px;
-            margin-bottom: 1rem;
-            transition: all 0.3s ease;
-        }
-        
-        .form-input:focus {
-            outline: none;
-            border-color: var(--navy-blue);
-            box-shadow: 0 0 0 2px rgba(26, 43, 74, 0.2);
-        }
-        
-        .form-label {
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-            display: block;
-        }
-        
-        .section-title {
+            font-size: 28px;
+            margin-bottom: 40px;
             position: relative;
-            padding-bottom: 0.5rem;
-            margin-bottom: 2rem;
+            display: inline-block;
         }
-        
-        .section-title::after {
+
+        .section-title:after {
             content: "";
             position: absolute;
-            bottom: 0;
+            bottom: -10px;
             left: 0;
             width: 60px;
             height: 3px;
-            background-color: var(--gold);
+            background-color: #C97A40;
         }
-        
-        .sample-section {
-            border: 1px solid var(--light-gray);
-            padding: 1.5rem;
-            border-radius: 8px;
-            margin-bottom: 2rem;
-            transition: all 0.3s ease;
-        }
-        
-        .sample-section:hover {
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-        
-        .header-container {
-            background: linear-gradient(135deg, var(--navy-blue), #0a1427);
-            color: white;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .header-container::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
+
+        .color-box {
+            height: 80px;
             width: 100%;
-            height: 100%;
-            background-image: url('https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80');
-            background-size: cover;
-            opacity: 0.15;
-            mix-blend-mode: overlay;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            transition: transform 0.3s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-        
-        .font-sample-playfair {
+
+        .color-box:hover {
+            transform: translateY(-5px);
+        }
+
+        .color-name {
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+
+        .color-hex {
+            font-family: monospace;
+            font-size: 12px;
+            color: #666;
+        }
+
+        .palette-container {
+            margin-bottom: 60px;
+            padding: 30px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+        }
+
+        .palette-title {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            font-size: 22px;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .divider {
+            height: 1px;
+            background-color: #eee;
+            margin: 60px 0;
+        }
+
+        .typo-sample {
+            margin-bottom: 50px;
+            padding: 30px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+        }
+
+        .typo-title {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            font-size: 22px;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .playfair {
             font-family: 'Playfair Display', serif;
         }
-        
-        .font-sample-lato {
-            font-family: 'Lato', sans-serif;
+
+        .dancing {
+            font-family: 'Dancing Script', cursive;
         }
-        
-        .font-sample-opensans {
+
+        .satisfy {
+            font-family: 'Satisfy', cursive;
+        }
+
+        .opensans {
             font-family: 'Open Sans', sans-serif;
         }
-        
-        .typography-sample {
-            padding: 1.5rem;
-            border-radius: 8px;
-            background-color: #f9f9f9;
-            margin-bottom: 1rem;
+
+        .sample-headline {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.2;
         }
-        
-        .gold-accent {
-            width: 50px;
-            height: 4px;
-            background-color: var(--gold);
-            margin: 1rem 0;
+
+        .sample-body {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 20px;
         }
-        
-        .hero-sample {
-            height: 220px;
-            background: linear-gradient(rgba(26, 43, 74, 0.8), rgba(26, 43, 74, 0.8)), url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2673&q=80');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            position: relative;
-            border-radius: 8px;
-            overflow: hidden;
-        }
-        
-        .testimonial-sample {
-            background-color: #f9f9f9;
-            padding: 2rem;
-            border-radius: 8px;
-            position: relative;
-        }
-        
-        .testimonial-sample::before {
-            content: """;
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            font-size: 4rem;
-            color: var(--gold);
-            font-family: 'Playfair Display', serif;
-            opacity: 0.3;
-        }
-        
-        .tooltip {
-            position: relative;
-            display: inline-block;
-            cursor: pointer;
-        }
-        
-        .tooltip .tooltiptext {
-            visibility: hidden;
-            width: 250px;
-            background-color: var(--dark-gray);
-            color: #fff;
+
+        .footer {
             text-align: center;
-            border-radius: 6px;
-            padding: 10px;
-            position: absolute;
-            z-index: 1;
-            bottom: 125%;
-            left: 50%;
-            transform: translateX(-50%);
-            opacity: 0;
-            transition: opacity 0.3s;
+            margin-top: 80px;
+            padding-top: 30px;
+            border-top: 1px solid #eee;
+            font-size: 12px;
+            color: #999;
         }
-        
-        .tooltip:hover .tooltiptext {
-            visibility: visible;
-            opacity: 1;
-        }
+
+        /* Manhattan Twilight Palette */
+        .mt-primary { background-color: #1E293B; }
+        .mt-contrast { background-color: #FFFFFF; border: 1px solid #eee; }
+        .mt-accent { background-color: #A17041; }
+        .mt-deep-base { background-color: #0F172A; }
+        .mt-muted { background-color: #94A3B8; }
+        .mt-textual { background-color: #475569; }
+
+        /* Sunset Skyline Palette */
+        .ss-primary { background-color: #FF4500; }
+        .ss-secondary { background-color: #FF5C33; }
+        .ss-tertiary { background-color: #FF6F61; }
+        .ss-dark1 { background-color: #2C2C2C; }
+        .ss-dark2 { background-color: #1E2233; }
+        .ss-accent1 { background-color: #6B4C3B; }
+        .ss-accent2 { background-color: #9CA1A6; }
+
+        /* Modern Luxe Palette */
+        .ml-black { background-color: #000000; }
+        .ml-white { background-color: #FFFFFF; border: 1px solid #eee; }
+        .ml-gray { background-color: #333333; }
+        .ml-accent1 { background-color: #C97A40; }
+        .ml-accent2 { background-color: #657383; }
+        .ml-accent3 { background-color: #3C8D87; }
+        .ml-accent4 { background-color: #D95F41; }
+
+        /* Urban Refined Palette */
+        .ur-black { background-color: #000000; }
+        .ur-white { background-color: #FFFFFF; border: 1px solid #eee; }
+        .ur-gray { background-color: #333333; }
+        .ur-accent1 { background-color: #D4AF36; }
+        .ur-accent2 { background-color: #545F70; }
+        .ur-accent3 { background-color: #3C9D94; }
+        .ur-accent4 { background-color: #E4572E; }
     </style>
 </head>
-<body class="bg-white">
-    <header class="header-container py-16 px-8 relative">
-        <div class="container mx-auto relative z-10">
-            <div class="flex flex-col items-center text-center">
-                <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-4">Zeshaan Qadir</h1>
-                <div class="w-20 h-1 bg-gold-bg mb-6"></div>
-                <h2 class="text-2xl md:text-3xl mb-2">Real Estate Brand Style Guide</h2>
-                <p class="text-lg opacity-80">Prepared by: Poppy Marketing & Consulting</p>
-                <p class="text-md opacity-70">Date: April 2025</p>
+
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <div class="header">
+            <div class="logo">POPPY MARKETING & CONSULTING</div>
+            <h6 class="subtitle">Prepared exclusively for</h6>
+            <h1 class="title">Real Estate Brand Style Proposal</h1>
+            <h2 class="subtitle" style="font-size: 24px; letter-spacing: 1px;">ZESHAAN QADIR</h2>
+            <p style="margin-top: 30px; color: #666;">April 2025</p>
+        </div>
+
+        <!-- Introduction Section -->
+        <div class="mb-16">
+            <h3 class="section-title">Design Goals</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h4 class="font-bold text-xl mb-4">Sleek & Modern</h4>
+                    <p class="text-gray-600">Contemporary aesthetics with clean lines and minimalist approach to represent the modern real estate professional.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h4 class="font-bold text-xl mb-4">NYC Luxury</h4>
+                    <p class="text-gray-600">Design elements that reflect the sophistication and exclusivity of New York City's luxury real estate market.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h4 class="font-bold text-xl mb-4">Strong Visual Impact</h4>
+                    <p class="text-gray-600">Bold imagery paired with clean fonts to create a minimalist layout with maximum impact on potential clients.</p>
+                </div>
             </div>
         </div>
-    </header>
-    
-    <main class="container mx-auto px-4 py-12">
-        <section class="mb-16">
-            <h2 class="section-title text-3xl navy-text">Visual & Style Direction</h2>
-            <div class="bg-gray-50 p-6 rounded-lg">
-                <h3 class="text-xl font-semibold mb-4">Design Goals</h3>
-                <ul class="list-disc pl-6 space-y-2">
-                    <li>Sleek, modern, and elegant</li>
-                    <li>Reflective of NYC luxury and Zeshaan's professional personality</li>
-                    <li>Minimalist layout with strong visual impact (bold imagery, clean fonts)</li>
-                </ul>
+
+        <!-- Color Palettes Section -->
+        <div class="mb-16">
+            <h3 class="section-title">Color Palettes</h3>
+            <p class="mb-10 text-gray-600">We've curated four distinctive color palettes that align with your brand vision, each offering a unique style while maintaining sophistication and luxury appeal.</p>
+
+            <!-- Manhattan Twilight Palette -->
+            <div class="palette-container mb-12">
+                <h4 class="palette-title">Manhattan Twilight</h4>
+                <div class="grid grid-cols-2 md:grid-cols-6 gap-6">
+                    <div>
+                        <div class="color-box mt-primary"></div>
+                        <p class="color-name">Primary</p>
+                        <p class="color-hex">#1E293B</p>
+                    </div>
+                    <div>
+                        <div class="color-box mt-contrast"></div>
+                        <p class="color-name">Contrast</p>
+                        <p class="color-hex">#FFFFFF</p>
+                    </div>
+                    <div>
+                        <div class="color-box mt-accent"></div>
+                        <p class="color-name">Accent</p>
+                        <p class="color-hex">#A17041</p>
+                    </div>
+                    <div>
+                        <div class="color-box mt-deep-base"></div>
+                        <p class="color-name">Deep Base</p>
+                        <p class="color-hex">#0F172A</p>
+                    </div>
+                    <div>
+                        <div class="color-box mt-muted"></div>
+                        <p class="color-name">Muted Cool</p>
+                        <p class="color-hex">#94A3B8</p>
+                    </div>
+                    <div>
+                        <div class="color-box mt-textual"></div>
+                        <p class="color-name">Textual Depth</p>
+                        <p class="color-hex">#475569</p>
+                    </div>
+                </div>
+                <p class="mt-6 text-gray-600">A sophisticated palette inspired by NYC's evening skyline, offering depth and elegance with a touch of warmth from the copper accent.</p>
             </div>
-        </section>
-        
+
+            <!-- Sunset Skyline Palette -->
+            <div class="palette-container mb-12">
+                <h4 class="palette-title">Sunset Skyline</h4>
+                <div class="grid grid-cols-2 md:grid-cols-7 gap-4">
+                    <div>
+                        <div class="color-box ss-primary"></div>
+                        <p class="color-name">Primary</p>
+                        <p class="color-hex">#FF4500</p>
+                    </div>
+                    <div>
+                        <div class="color-box ss-secondary"></div>
+                        <p class="color-name">Secondary</p>
+                        <p class="color-hex">#FF5C33</p>
+                    </div>
+                    <div>
+                        <div class="color-box ss-tertiary"></div>
+                        <p class="color-name">Tertiary</p>
+                        <p class="color-hex">#FF6F61</p>
+                    </div>
+                    <div>
+                        <div class="color-box ss-dark1"></div>
+                        <p class="color-name">Dark Base</p>
+                        <p class="color-hex">#2C2C2C</p>
+                    </div>
+                    <div>
+                        <div class="color-box ss-dark2"></div>
+                        <p class="color-name">Deep Base</p>
+                        <p class="color-hex">#1E2233</p>
+                    </div>
+                    <div>
+                        <div class="color-box ss-accent1"></div>
+                        <p class="color-name">Accent 1</p>
+                        <p class="color-hex">#6B4C3B</p>
+                    </div>
+                    <div>
+                        <div class="color-box ss-accent2"></div>
+                        <p class="color-name">Accent 2</p>
+                        <p class="color-hex">#9CA1A6</p>
+                    </div>
+                </div>
+                <p class="mt-6 text-gray-600">Bold and vibrant with warm orange tones reminiscent of a NYC sunset against dark architectural silhouettes, creating dramatic contrast.</p>
+            </div>
+
+            <!-- Modern Luxe Palette -->
+            <div class="palette-container mb-12">
+                <h4 class="palette-title">Modern Luxe</h4>
+                <div class="grid grid-cols-2 md:grid-cols-7 gap-4">
+                    <div>
+                        <div class="color-box ml-black"></div>
+                        <p class="color-name">Black</p>
+                        <p class="color-hex">#000000</p>
+                    </div>
+                    <div>
+                        <div class="color-box ml-white"></div>
+                        <p class="color-name">White</p>
+                        <p class="color-hex">#FFFFFF</p>
+                    </div>
+                    <div>
+                        <div class="color-box ml-gray"></div>
+                        <p class="color-name">Gray</p>
+                        <p class="color-hex">#333333</p>
+                    </div>
+                    <div>
+                        <div class="color-box ml-accent1"></div>
+                        <p class="color-name">Copper</p>
+                        <p class="color-hex">#C97A40</p>
+                    </div>
+                    <div>
+                        <div class="color-box ml-accent2"></div>
+                        <p class="color-name">Slate Blue</p>
+                        <p class="color-hex">#657383</p>
+                    </div>
+                    <div>
+                        <div class="color-box ml-accent3"></div>
+                        <p class="color-name">Teal</p>
+                        <p class="color-hex">#3C8D87</p>
+                    </div>
+                    <div>
+                        <div class="color-box ml-accent4"></div>
+                        <p class="color-name">Terracotta</p>
+                        <p class="color-hex">#D95F41</p>
+                    </div>
+                </div>
+                <p class="mt-6 text-gray-600">A timeless black and white foundation with rich accent colors that add sophistication and visual interest to your branding.</p>
+            </div>
+
+            <!-- Urban Refined Palette -->
+            <div class="palette-container">
+                <h4 class="palette-title">Urban Refined</h4>
+                <div class="grid grid-cols-2 md:grid-cols-7 gap-4">
+                    <div>
+                        <div class="color-box ur-black"></div>
+                        <p class="color-name">Black</p>
+                        <p class="color-hex">#000000</p>
+                    </div>
+                    <div>
+                        <div class="color-box ur-white"></div>
+                        <p class="color-name">White</p>
+                        <p class="color-hex">#FFFFFF</p>
+                    </div>
+                    <div>
+                        <div class="color-box ur-gray"></div>
+                        <p class="color-name">Gray</p>
+                        <p class="color-hex">#333333</p>
+                    </div>
+                    <div>
+                        <div class="color-box ur-accent1"></div>
+                        <p class="color-name">Gold</p>
+                        <p class="color-hex">#D4AF36</p>
+                    </div>
+                    <div>
+                        <div class="color-box ur-accent2"></div>
+                        <p class="color-name">Slate</p>
+                        <p class="color-hex">#545F70</p>
+                    </div>
+                    <div>
+                        <div class="color-box ur-accent3"></div>
+                        <p class="color-name">Jade</p>
+                        <p class="color-hex">#3C9D94</p>
+                    </div>
+                    <div>
+                        <div class="color-box ur-accent4"></div>
+                        <p class="color-name">Vermillion</p>
+                        <p class="color-hex">#E4572E</p>
+                    </div>
+                </div>
+                <p class="mt-6 text-gray-600">Classic elegance with a contemporary edge, featuring a gold accent for a distinctly luxury feel with vibrant supporting colors.</p>
+            </div>
+        </div>
+
         <div class="divider"></div>
-        
-        <section class="mb-16">
-            <h2 class="section-title text-3xl navy-text">Color Palette & Usage</h2>
-            
-            <h3 class="text-2xl font-medium mb-6 navy-text">Primary Colors</h3>
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-10">
-                <div>
-                    <div class="color-swatch navy-bg" title="Navy Blue - #1A2B4A"></div>
-                    <h4 class="font-semibold text-lg">Navy Blue</h4>
-                    <p class="text-sm text-gray-700 mb-1">HEX: #1A2B4A</p>
-                    <p class="text-sm text-gray-600">Primary brand color for headers, hero sections, and footers</p>
-                </div>
-                
-                <div>
-                    <div class="color-swatch gold-bg" title="Gold - #D4AF36"></div>
-                    <h4 class="font-semibold text-lg">Gold</h4>
-                    <p class="text-sm text-gray-700 mb-1">HEX: #D4AF36</p>
-                    <p class="text-sm text-gray-600">Luxury accents, lines, icons, highlights</p>
-                </div>
-                
-                <div>
-                    <div class="color-swatch blood-orange-bg" title="Blood Orange - #E4572E"></div>
-                    <h4 class="font-semibold text-lg">Blood Orange</h4>
-                    <p class="text-sm text-gray-700 mb-1">HEX: #E4572E</p>
-                    <p class="text-sm text-gray-600">Buttons, links, CTAs</p>
-                </div>
-                
-                <div>
-                    <div class="color-swatch teal-bg" title="Teal - #2F4F4F"></div>
-                    <h4 class="font-semibold text-lg">Teal</h4>
-                    <p class="text-sm text-gray-700 mb-1">HEX: #2F4F4F</p>
-                    <p class="text-sm text-gray-600">Secondary accent sections or iconography</p>
-                </div>
-            </div>
-            
-            <h3 class="text-2xl font-medium mb-6 navy-text">Neutral Colors</h3>
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-                <div>
-                    <div class="color-swatch black-bg" title="Black - #000000"></div>
-                    <h4 class="font-semibold text-lg">Black</h4>
-                    <p class="text-sm text-gray-700 mb-1">HEX: #000000</p>
-                    <p class="text-sm text-gray-600">Primary text and contrast accents</p>
-                </div>
-                
-                <div>
-                    <div class="color-swatch dark-gray-bg" title="Dark Gray - #333333"></div>
-                    <h4 class="font-semibold text-lg">Dark Gray</h4>
-                    <p class="text-sm text-gray-700 mb-1">HEX: #333333</p>
-                    <p class="text-sm text-gray-600">Body text and muted backgrounds</p>
-                </div>
-                
-                <div>
-                    <div class="color-swatch light-gray-bg" title="Light Gray - #EEEEEE"></div>
-                    <h4 class="font-semibold text-lg">Light Gray</h4>
-                    <p class="text-sm text-gray-700 mb-1">HEX: #EEEEEE</p>
-                    <p class="text-sm text-gray-600">Dividers, form backgrounds</p>
-                </div>
-                
-                <div>
-                    <div class="color-swatch white-bg border" title="White - #FFFFFF"></div>
-                    <h4 class="font-semibold text-lg">White</h4>
-                    <p class="text-sm text-gray-700 mb-1">HEX: #FFFFFF</p>
-                    <p class="text-sm text-gray-600">Backgrounds, clean content areas</p>
-                </div>
-            </div>
-            
-            <div class="mt-10 bg-gray-50 p-6 rounded-lg">
-                <h3 class="text-xl font-semibold mb-4">Color Usage Guidelines</h3>
-                <ul class="list-disc pl-6 space-y-3">
-                    <li><span class="navy-text font-semibold">Navy Blue</span> should be the dominant brand color, used for key elements like navigation, headers, and important section backgrounds.</li>
-                    <li><span class="gold-text font-semibold">Gold</span> should be used sparingly as an accent to highlight luxury aspects and create visual interest points.</li>
-                    <li><span class="blood-orange-text font-semibold">Blood Orange</span> creates dynamic contrast and should be reserved primarily for action items and interactive elements.</li>
-                    <li><span class="teal-text font-semibold">Teal</span> can be used for secondary sections or supporting elements that require distinction without competing with primary colors.</li>
-                    <li>Maintain appropriate color contrast ratios for accessibility, particularly with text elements.</li>
-                </ul>
-            </div>
-        </section>
-        
-        <div class="divider"></div>
-        
-        <section class="mb-16">
-            <h2 class="section-title text-3xl navy-text">Typography</h2>
-            <p class="mb-8">The typography selection balances elegant refinement with modern readability, perfect for luxury real estate.</p>
-            
-            <h3 class="text-2xl font-medium mb-6 navy-text">Headlines</h3>
-            <div class="typography-sample">
-                <p class="text-sm text-gray-500 mb-2">Font: Playfair Display (Serif)</p>
-                <div class="space-y-4">
-                    <div>
-                        <h1 class="font-sample-playfair text-4xl font-bold">Headline Level 1</h1>
-                        <p class="text-sm text-gray-600 mt-1">Used for main page titles and hero section headers</p>
-                    </div>
-                    <div>
-                        <h2 class="font-sample-playfair text-3xl font-semibold">Headline Level 2</h2>
-                        <p class="text-sm text-gray-600 mt-1">Used for section headers and featured content</p>
-                    </div>
-                    <div>
-                        <h3 class="font-sample-playfair text-2xl font-medium">Headline Level 3</h3>
-                        <p class="text-sm text-gray-600 mt-1">Used for subsections and important callouts</p>
-                    </div>
-                    <div>
-                        <h4 class="font-sample-playfair text-xl font-medium">Headline Level 4</h4>
-                        <p class="text-sm text-gray-600 mt-1">Used for minor section headers</p>
+
+        <!-- Typography Section -->
+        <div class="mb-16">
+            <h3 class="section-title">Typography</h3>
+            <p class="mb-10 text-gray-600">Typography plays a crucial role in brand identity. Below are three carefully selected font combinations that communicate luxury, professionalism, and distinctive character.</p>
+
+            <!-- Typography Option 1 -->
+            <div class="typo-sample">
+                <h4 class="typo-title">Option 1: Playfair Display + Dancing Script</h4>
+                <div class="mb-6 p-6 bg-gray-50 rounded">
+                    <h5 class="sample-headline playfair">Luxury Real Estate in Manhattan</h5>
+                    <p class="sample-body dancing" style="font-size: 18px;">Experience the epitome of New York City living with our exclusive property portfolio. From penthouses with stunning skyline views to historic brownstones with character and charm, we connect discerning clients with their perfect Manhattan residence.</p>
+                    <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div>
+                            <p class="font-bold mb-2">Headline Font: Playfair Display</p>
+                            <p class="text-sm text-gray-600">A serif font with dramatic thick/thin transitions and sharp details, perfect for headlines and creating a sense of luxury and timelessness.</p>
+                        </div>
+                        <div>
+                            <p class="font-bold mb-2">Body Font: Dancing Script</p>
+                            <p class="text-sm text-gray-600">An elegant cursive script that adds a personal, sophisticated touch while maintaining readability for short passages and accents.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-            
-            <h3 class="text-2xl font-medium mb-6 mt-10 navy-text">Body Copy</h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="typography-sample">
-                    <p class="text-sm text-gray-500 mb-2">Primary: Lato (Sans-Serif)</p>
-                    <p class="font-sample-lato text-base">Lato offers exceptional readability with a modern, professional appearance. Its clean lines and subtle curves convey sophistication while maintaining excellent legibility across all screen sizes and devices.</p>
+
+            <!-- Typography Option 2 -->
+            <div class="typo-sample">
+                <h4 class="typo-title">Option 2: Playfair Display + Satisfy</h4>
+                <div class="mb-6 p-6 bg-gray-50 rounded">
+                    <h5 class="sample-headline playfair">Exclusive Properties in Tribeca</h5>
+                    <p class="sample-body satisfy" style="font-size: 18px;">Discover the perfect blend of historic architecture and modern luxury in one of Manhattan's most coveted neighborhoods. Our curated Tribeca listings offer spacious lofts, designer finishes, and the sophisticated urban lifestyle you desire.</p>
+                    <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div>
+                            <p class="font-bold mb-2">Headline Font: Playfair Display</p>
+                            <p class="text-sm text-gray-600">Maintains consistency with its classic serif character while providing strong visual hierarchy and sophistication.</p>
+                        </div>
+                        <div>
+                            <p class="font-bold mb-2">Body Font: Satisfy</p>
+                            <p class="text-sm text-gray-600">A flowing script with a relaxed elegance and excellent readability compared to many script fonts, adding personality while remaining professional.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Typography Option 3 -->
+            <div class="typo-sample">
+                <h4 class="typo-title">Option 3: Open Sans (All Purpose)</h4>
+                <div class="mb-6 p-6 bg-gray-50 rounded">
+                    <h5 class="sample-headline opensans" style="font-weight: 700;">Upper East Side Luxury Condominiums</h5>
+                    <p class="sample-body opensans">Presenting an exceptional collection of Upper East Side residences that exemplify Manhattan refinement. These meticulously designed spaces offer premium finishes, classic proportions, and proximity to Central Park and Museum Mile for the discerning homebuyer.</p>
                     <div class="mt-4">
-                        <p class="font-sample-lato text-base font-normal">Regular weight paragraph text</p>
-                        <p class="font-sample-lato text-base font-semibold mt-2">Semibold text for emphasis</p>
-                        <p class="font-sample-lato text-sm text-gray-600 mt-2">Small text for captions and notes</p>
-                    </div>
-                </div>
-                
-                <div class="typography-sample">
-                    <p class="text-sm text-gray-500 mb-2">Alternative: Open Sans (Sans-Serif)</p>
-                    <p class="font-sample-opensans text-base">Open Sans provides excellent readability with a friendly, professional character. Its neutral appearance makes it versatile while remaining highly legible across digital platforms and print materials.</p>
-                    <div class="mt-4">
-                        <p class="font-sample-opensans text-base font-normal">Regular weight paragraph text</p>
-                        <p class="font-sample-opensans text-base font-semibold mt-2">Semibold text for emphasis</p>
-                        <p class="font-sample-opensans text-sm text-gray-600 mt-2">Small text for captions and notes</p>
+                        <p class="font-bold mb-2">All-Purpose Font: Open Sans</p>
+                        <p class="text-sm text-gray-600">A versatile sans-serif family with excellent readability across various weights and sizes. Its clean, neutral character works well for both headlines and body text while projecting a modern, sophisticated image.</p>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4">
+                            <div class="text-center">
+                                <p class="opensans" style="font-weight: 300;">Light (300)</p>
+                            </div>
+                            <div class="text-center">
+                                <p class="opensans" style="font-weight: 400;">Regular (400)</p>
+                            </div>
+                            <div class="text-center">
+                                <p class="opensans" style="font-weight: 600;">SemiBold (600)</p>
+                            </div>
+                            <div class="text-center">
+                                <p class="opensans" style="font-weight: 700;">Bold (700)</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            
-            <div class="mt-10 bg-gray-50 p-6 rounded-lg">
-                <h3 class="text-xl font-semibold mb-4">Typography Guidelines</h3>
-                <ul class="list-disc pl-6 space-y-3">
-                    <li>Maintain hierarchy clarity by using proper font sizes and weights consistently</li>
-                    <li>Body text should be set at 16px minimum for optimal readability</li>
-                    <li>Line height should be approximately 1.5-1.6 times the font size for body text</li>
-                    <li>Limit use of italic styles except for specific emphasis needs</li>
-                    <li>Ensure sufficient contrast between text and background colors</li>
-                    <li>Use lighter font weights for larger display text, and medium to semibold weights for smaller text</li>
-                </ul>
-            </div>
-        </section>
-        
-        <div class="divider"></div>
-        
-        <section class="mb-16">
-            <h2 class="section-title text-3xl navy-text">Tone of Voice</h2>
-            
+        </div>
+
+        <!-- Layout Suggestions Section -->
+        <div class="mb-16">
+            <h3 class="section-title">Application Examples</h3>
+            <p class="mb-10 text-gray-600">Below are suggestions for how these design elements can be applied to create a cohesive brand experience across various touchpoints.</p>
+
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div>
-                    <h3 class="text-2xl font-medium mb-4 navy-text">Brand Voice Attributes</h3>
-                    <ul class="list-disc pl-6 space-y-3">
-                        <li><span class="font-semibold">Professional, but warm and personal</span> - Conveys expertise while remaining approachable</li>
-                        <li><span class="font-semibold">Knowledgeable and approachable</span> - Demonstrates market insight without overwhelming jargon</li>
-                        <li><span class="font-semibold">Discreet, efficient, and client-first</span> - Emphasizes service quality and respect for client privacy</li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h3 class="text-2xl font-medium mb-4 navy-text">Brand Voice Examples</h3>
-                    <div class="space-y-6">
-                        <div class="p-4 border-l-4 border-gold-bg">
-                            <p class="font-medium text-lg mb-1">"Let's Connect"</p>
-                            <p class="text-gray-600">Inviting yet professional call-to-action</p>
-                        </div>
-                        <div class="p-4 border-l-4 border-gold-bg">
-                            <p class="font-medium text-lg mb-1">"NYC Real Estate, Refined"</p>
-                            <p class="text-gray-600">Concise tagline conveying sophistication</p>
-                        </div>
-                        <div class="p-4 border-l-4 border-gold-bg">
-                            <p class="font-medium text-lg mb-1">"Efficiency. Discretion. Results."</p>
-                            <p class="text-gray-600">Crisp value proposition highlighting client benefits</p>
+                <!-- Business Card Example -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h4 class="font-bold text-xl mb-4 playfair">Business Card Design</h4>
+                    <div class="border border-gray-200 p-6 rounded bg-gray-50 flex justify-center items-center">
+                        <div style="width: 350px; height: 200px; background-color: #1E293B; border-radius: 4px; position: relative; padding: 20px;" class="shadow-lg">
+                            <div style="color: #FFFFFF; font-family: 'Playfair Display'; font-size: 22px; font-weight: 700; letter-spacing: 1px;">ZESHAAN QADIR</div>
+                            <div style="color: #94A3B8; font-family: 'Open Sans'; font-size: 12px; font-weight: 300; letter-spacing: 2px; text-transform: uppercase; margin-top: 4px;">LUXURY REAL ESTATE SPECIALIST</div>
+                            <div style="position: absolute; bottom: 20px; left: 20px;">
+                                <div style="color: #FFFFFF; font-family: 'Open Sans'; font-size: 12px;">212.555.1234</div>
+                                <div style="color: #FFFFFF; font-family: 'Open Sans'; font-size: 12px;">zeshaan@example.com</div>
+                            </div>
+                            <div style="position: absolute; right: 20px; bottom: 20px; width: 40px; height: 40px; background-color: #A17041; border-radius: 50%;"></div>
                         </div>
                     </div>
+                    <p class="mt-4 text-sm text-gray-600">Example using the Manhattan Twilight palette with Playfair Display and Open Sans typography.</p>
+                </div>
+
+                <!-- Website Header Example -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h4 class="font-bold text-xl mb-4 playfair">Website Header Design</h4>
+                    <div class="border border-gray-200 p-6 rounded bg-gray-50 flex justify-center items-center">
+                        <div style="width: 100%; background-color: #FFFFFF; border-radius: 4px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                            <div style="height: 60px; background-color: #FFFFFF; border-bottom: 1px solid #eee; display: flex; align-items: center; padding: 0 20px; justify-content: space-between;">
+                                <div style="font-family: 'Playfair Display'; font-weight: 700; font-size: 20px; color: #000000;">ZESHAAN QADIR</div>
+                                <div style="display: flex; gap: 20px;">
+                                    <div style="font-family: 'Open Sans'; font-size: 14px; color: #333333;">PROPERTIES</div>
+                                    <div style="font-family: 'Open Sans'; font-size: 14px; color: #333333;">ABOUT</div>
+                                    <div style="font-family: 'Open Sans'; font-size: 14px; color: #333333;">CONTACT</div>
+                                </div>
+                            </div>
+                            <div style="height: 120px; background-color: #000000; position: relative;">
+                                <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; width: 100%;">
+                                    <div style="font-family: 'Playfair Display'; font-weight: 700; font-size: 24px; color: #FFFFFF; margin-bottom: 8px;">LUXURY PROPERTIES</div>
+                                    <div style="font-family: 'Satisfy'; font-size: 16px; color: #D4AF36;">Distinctive Homes for Discerning Clients</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="mt-4 text-sm text-gray-600">Example using the Urban Refined palette with contrasting typography for visual interest.</p>
                 </div>
             </div>
-            
-            <div class="mt-10 bg-gray-50 p-6 rounded-lg">
-                <h3 class="text-xl font-semibold mb-4">Communication Guidelines</h3>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                        <h4 class="text-lg font-medium mb-3 navy-text">Do</h4>
-                        <ul class="list-disc pl-6 space-y-2">
-                            <li>Use concise, direct language that respects the reader's time</li>
-                            <li>Balance professionalism with warmth and accessibility</li>
-                            <li>Emphasize client benefits rather than features</li>
-                            <li>Be specific about NYC neighborhoods and market knowledge</li>
-                            <li>Maintain a consistent voice across all touchpoints</li>
-                        </ul>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+                <!-- Social Media Example -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h4 class="font-bold text-xl mb-4 playfair">Social Media Styling</h4>
+                    <div class="border border-gray-200 p-6 rounded bg-gray-50 flex justify-center items-center">
+                        <div style="width: 100%; background-color: #FFFFFF; border-radius: 8px; overflow: hidden; padding-bottom: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                            <div style="height: 160px; background-color: #545F70; position: relative; display: flex; justify-content: center; align-items: center;">
+                                <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; width: 80%;">
+                                    <div style="font-family: 'Playfair Display'; font-weight: 700; font-size: 22px; color: #FFFFFF;">JUST LISTED</div>
+                                    <div style="font-family: 'Dancing Script'; font-size: 18px; color: #D4AF36; margin-top: 5px;">Central Park West Penthouse</div>
+                                </div>
+                            </div>
+                            <div style="padding: 15px;">
+                                <div style="font-family: 'Open Sans'; font-size: 14px; color: #333333; line-height: 1.4;">Breathtaking views and impeccable design in this 3,200 sq ft penthouse with private terrace. #LuxuryRealEstate</div>
+                            </div>
+                        </div>
                     </div>
-                    
-                    <div>
-                        <h4 class="text-lg font-medium mb-3 navy-text">Don't</h4>
-                        <ul class="list-disc pl-6 space-y-2">
-                            <li>Use excessive jargon or technical terms without explanation</li>
-                            <li>Adopt an overly casual or informal tone</li>
-                            <li>Make exaggerated claims or use hyperbole</li>
-                            <li>Use generic messaging that could apply to any real estate brand</li>
-                            <li>Sacrifice clarity for cleverness</li>
-                        </ul>
+                    <p class="mt-4 text-sm text-gray-600">Example using Urban Refined palette with Playfair Display and Dancing Script for social media posts.</p>
+                </div>
+
+                <!-- Property Brochure Example -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h4 class="font-bold text-xl mb-4 playfair">Property Brochure</h4>
+                    <div class="border border-gray-200 p-6 rounded bg-gray-50 flex justify-center items-center">
+                        <div style="width: 100%; background-color: #FFFFFF; border-radius: 4px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                            <div style="height: 30px; background-color: #C97A40;"></div>
+                            <div style="padding: 20px;">
+                                <div style="font-family: 'Playfair Display'; font-weight: 700; font-size: 22px; color: #000000; margin-bottom: 10px;">TRIBECA LOFT</div>
+                                <div style="font-family: 'Open Sans'; font-weight: 300; font-size: 14px; color: #333333; margin-bottom: 15px;">25 NORTH MOORE STREET</div>
+                                <div style="width: 100%; height: 1px; background-color: #eee; margin: 15px 0;"></div>
+                                <div style="font-family: 'Open Sans'; font-size: 14px; color: #333333; line-height: 1.4;">
+                                    3 Bedrooms | 3.5 Bathrooms | 3,500 sq ft
+                                </div>
+                                <div style="width: 100%; height: 1px; background-color: #eee; margin: 15px 0;"></div>
+                                <div style="font-family: 'Open Sans'; font-size: 14px; color: #333333; line-height: 1.4;">
+                                    Exclusively represented by Zeshaan Qadir
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                    <p class="mt-4 text-sm text-gray-600">Example using Modern Luxe palette with a clean, professional layout for property marketing materials.</p>
                 </div>
             </div>
-        </section>
-        
-        <div class="divider"></div>
-        
-        <section class="mb-16">
-            <h2 class="section-title text-3xl navy-text">Buttons & CTA Styling</h2>
-            
-            <h3 class="text-2xl font-medium mb-6 navy-text">Primary Buttons</h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
-                <div class="p-6 bg-gray-50 rounded-lg">
-                    <h4 class="text-lg font-medium mb-4">Blood Orange Button (Default)</h4>
-                    <div class="flex flex-col items-start space-y-6">
-                        <a href="#" class="btn-primary">Let's Connect</a>
-                        <div class="text-sm text-gray-600">
-                            <p><strong>Usage:</strong> Primary calls-to-action, most important conversion points</p>
-                            <p class="mt-2"><strong>Styling:</strong></p>
-                            <ul class="list-disc pl-6 mt-1 space-y-1">
-                                <li>Background: Blood Orange (#E4572E)</li>
-                                <li>Text: White (#FFFFFF)</li>
-                                <li>Border radius: 4px</li>
-                                <li>Padding: 0.75rem 1.5rem</li>
-                                <li>Font weight: 600 (semibold)</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="p-6 bg-gray-50 rounded-lg">
-                    <h4 class="text-lg font-medium mb-4">Gold Button (Alternative)</h4>
-                    <div class="flex flex-col items-start space-y-6">
-                        <a href="#" class="btn-gold">Schedule a Call</a>
-                        <div class="text-sm text-gray-600">
-                            <p><strong>Usage:</strong> Premium or featured actions, highlighting luxury aspects</p>
-                            <p class="mt-2"><strong>Styling:</strong></p>
-                            <ul class="list-disc pl-6 mt-1 space-y-1">
-                                <li>Background: Gold (#D4AF36)</li>
-                                <li>Text: White (#FFFFFF)</li>
-                                <li>Border radius: 4px</li>
-                                <li>Padding: 0.75rem 1.5rem</li>
-                                <li>Font weight: 600 (semibold)</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <h3 class="text-2xl font-medium mb-6 navy-text">Secondary Buttons</h3>
-            <div class="p-6 bg-gray-50 rounded-lg mb-10">
-                <h4 class="text-lg font-medium mb-4">Outline Button</h4>
-                <div class="flex flex-col items-start space-y-6">
-                    <a href="#" class="btn-secondary">Explore My Listings</a>
-                    <div class="text-sm text-gray-600">
-                        <p><strong>Usage:</strong> Secondary actions, less prominent CTAs, alternative choices</p>
-                        <p class="mt-2"><strong>Styling:</strong></p>
-                        <ul class="list-disc pl-6 mt-1 space-y-1">
-                            <li>Background: Transparent</li>
-                            <li>Text: Navy Blue (#1A2B4A)</li>
-                            <li>Border: 2px solid Navy Blue (#1A2B4A)</li>
-                            <li>Border radius: 4px</li>
-                            <li>Padding: 0.75rem 1.5rem</li>
-                            <li>Font weight: 600 (semibold)</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            
-            <h3 class="text-2xl font-medium mb-6 navy-text">Button States</h3>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="p-6 bg-gray-50 rounded-lg">
-                    <h4 class="text-lg font-medium mb-4">Default</h4>
-                    <a href="#" class="btn-primary">Default State</a>
-                </div>
-                
-                <div class="p-6 bg-gray-50 rounded-lg">
-                    <h4 class="text-lg font-medium mb-4">Hover</h4>
-                    <div class="relative">
-                        <a href="#" class="btn-primary" style="background-color: #c24022;">Hover State</a>
-                        <p class="text-sm text-gray-500 mt-3">Color darkens slightly and button elevates with subtle shadow</p>
-                    </div>
-                </div>
-                
-                <div class="p-6 bg-gray-50 rounded-lg">
-                    <h4 class="text-lg font-medium mb-4">Disabled</h4>
-                    <a href="#" class="btn-primary opacity-50 cursor-not-allowed" style="pointer-events: none;">Disabled State</a>
-                    <p class="text-sm text-gray-500 mt-3">50% opacity, no hover effects</p>
-                </div>
-            </div>
-            
-            <div class="mt-10 bg-gray-50 p-6 rounded-lg">
-                <h3 class="text-xl font-semibold mb-4">CTA Examples</h3>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    <div class="p-4 border border-light-gray rounded-lg text-center">
-                        <p class="font-medium navy-text">Let's Connect</p>
-                        <p class="text-sm text-gray-600 mt-2">For primary contact buttons</p>
-                    </div>
-                    <div class="p-4 border border-light-gray rounded-lg text-center">
-                        <p class="font-medium navy-text">Schedule a Call</p>
-                        <p class="text-sm text-gray-600 mt-2">For booking appointments</p>
-                    </div>
-                    <div class="p-4 border border-light-gray rounded-lg text-center">
-                        <p class="font-medium navy-text">Explore My Listings</p>
-                        <p class="text-sm text-gray-600 mt-2">For property showcases</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <div class="divider"></div>
-        
-        <section class="mb-16">
-            <h2 class="section-title text-3xl navy-text">Contact Form Field Requirements</h2>
-            
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
-                <div>
-                    <h3 class="text-2xl font-medium mb-6 navy-text">Form Fields</h3>
-                    <div class="bg-gray-50 p-6 rounded-lg">
-                        <div class="mb-4">
-                            <label for="name" class="form-label">Name</label>
-                            <input type="text" id="name" class="form-input" placeholder="Full Name">
-                            <p class="text-sm text-gray-500">Short text field</p>
-                        </div>
-                        
-                        <div class="mb-4">
-                            <label for="email" class="form-label">Email</label>
-                            <input type="email" id="email" class="form-input" placeholder="email@example.com">
-                            <p class="text-sm text-gray-500">Email field with validation</p>
-                        </div>
-                        
-                        <div class="mb-4">
-                            <label for="phone" class="form-label">Phone</label>
-                            <input type="tel" id="phone" class="form-input" placeholder="(123) 456-7890">
-                            <p class="text-sm text-gray-500">Numeric/text field</p>
-                        </div>
-                        
-                        <div class="mb-4">
-                            <label for="type" class="form-label">Buyer or Seller</label>
-                            <select id="type" class="form-input">
-                                <option value="" disabled selected>Select Option</option>
-                                <option value="buyer">Buyer</option>
-                                <option value="seller">Seller</option>
-                                <option value="both">Both</option>
-                            </select>
-                            <p class="text-sm text-gray-500">Dropdown or radio buttons</p>
-                        </div>
-                        
-                        <div class="mb-4">
-                            <label for="budget" class="form-label">Budget Range</label>
-                            <select id="budget" class="form-input">
-                                <option value="" disabled selected>Select Budget Range</option>
-                                <option value="range1">Under $500,000</option>
-                                <option value="range2">$500,000 - $1,000,000</option>
-                                <option value="range3">$1,000,000 - $2,000,000</option>
-                                <option value="range4">$2,000,000 - $5,000,000</option>
-                                <option value="range5">$5,000,000+</option>
-                            </select>
-                            <p class="text-sm text-gray-500">Dropdown with preset ranges</p>
-                        </div>
-                        
-                        <div class="mb-4">
-                            <label for="prequalified" class="form-label">Pre-qualified?</label>
-                            <div class="flex items-center space-x-4 mt-2">
-                                <label class="inline-flex items-center">
-                                    <input type="radio" name="prequalified" value="yes" class="mr-2">
-                                    <span>Yes</span>
-                                </label>
-                                <label class="inline-flex items-center">
-                                    <input type="radio" name="prequalified" value="no" class="mr-2">
-                                    <span>No</span>
-                                </label>
-                            </div>
-                            <p class="text-sm text-gray-500">Yes/No toggle or checkbox</p>
-                        </div>
-                        
-                        <div class="mb-4">
-                            <label for="contact-method" class="form-label">Preferred Contact Method</label>
-                            <select id="contact-method" class="form-input">
-                                <option value="" disabled selected>Select Contact Method</option>
-                                <option value="call">Call</option>
-                                <option value="text">Text</option>
-                                <option value="email">Email</option>
-                            </select>
-                            <p class="text-sm text-gray-500">Dropdown selection</p>
-                        </div>
-                        
-                        <div class="mb-4">
-                            <label for="message" class="form-label">Message (optional)</label>
-                            <textarea id="message" class="form-input" rows="4" placeholder="Tell us more about what you're looking for..."></textarea>
-                            <p class="text-sm text-gray-500">Multi-line text box</p>
-                        </div>
-                        
-                        <button class="btn-primary w-full">Submit</button>
-                    </div>
-                </div>
-                
-                <div>
-                    <h3 class="text-2xl font-medium mb-6 navy-text">Form Styling Guidelines</h3>
-                    
-                    <div class="bg-gray-50 p-6 rounded-lg mb-8">
-                        <h4 class="text-lg font-medium mb-4">Form Element Styling</h4>
-                        <ul class="list-disc pl-6 space-y-3">
-                            <li><strong>Input fields:</strong> Clean borders (1px), subtle border-radius (4px), generous padding for touch targets</li>
-                            <li><strong>Labels:</strong> Clear, concise text positioned above inputs, semibold weight for visibility</li>
-                            <li><strong>Focus states:</strong> Subtle border color change to Navy Blue with light box shadow</li>
-                            <li><strong>Error states:</strong> Light red background, red border, with inline error message</li>
-                            <li><strong>Success confirmation:</strong> Subtle animation and color change to indicate successful submission</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="bg-gray-50 p-6 rounded-lg">
-                        <h4 class="text-lg font-medium mb-4">Form Behavior Best Practices</h4>
-                        <ul class="list-disc pl-6 space-y-3">
-                            <li>Implement inline validation to provide immediate feedback</li>
-                            <li>Use proper input types for mobile optimization (email, tel, etc.)</li>
-                            <li>Keep form length minimal while capturing essential information</li>
-                            <li>Clearly mark required vs. optional fields</li>
-                            <li>Provide helpful placeholder text that doesn't replace labels</li>
-                            <li>Ensure form is fully accessible with proper ARIA attributes</li>
-                            <li>Implement responsive design to maintain usability across all devices</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="mt-8 p-5 border-l-4 border-blood-orange-bg bg-gray-50">
-                        <h4 class="text-lg font-medium mb-2">Form Submission</h4>
-                        <p>After submission, users should receive:</p>
-                        <ul class="list-disc pl-6 mt-3 space-y-2">
-                            <li>Immediate visual confirmation of successful submission</li>
-                            <li>A thank you message with expectations for follow-up</li>
-                            <li>Automatic email confirmation sent to their provided email</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <div class="divider"></div>
-        
-        <section class="mb-16">
-            <h2 class="section-title text-3xl navy-text">Sample Layout Context</h2>
-            <p class="mb-8 text-gray-700">The following examples demonstrate how brand elements (color, typography, tone, buttons) can be applied in different website sections.</p>
-            
-            <div class="space-y-10">
-                <!-- Hero Section Example -->
-                <div class="sample-section">
-                    <h3 class="text-2xl font-medium mb-6 navy-text">Hero Section Example</h3>
-                    <div class="hero-sample">
-                        <div class="text-center p-6">
-                            <h1 class="font-sample-playfair text-4xl font-bold mb-2">NYC Luxury Real Estate</h1>
-                            <div class="w-16 h-1 bg-gold-bg mx-auto mb-4"></div>
-                            <p class="font-sample-lato text-lg mb-4">Discretion. Expertise. Results.</p>
-                            <a href="#" class="btn-primary">Let's Connect</a>
-                        </div>
-                    </div>
-                    <div class="mt-4">
-                        <p class="text-sm text-gray-600">This hero section employs the Navy Blue background with a subtle luxury property image overlay, Gold accent line, Playfair Display for the headline, and the primary Blood Orange CTA button.</p>
-                    </div>
-                </div>
-                
-                <!-- About Section Example -->
-                <div class="sample-section">
-                    <h3 class="text-2xl font-medium mb-6 navy-text">About Zeshaan Section Example</h3>
-                    <div class="bg-white p-6 rounded-lg">
-                        <div class="flex flex-col md:flex-row gap-8">
-                            <div class="w-full md:w-1/3 bg-gray-200 rounded-lg" style="height: 200px;">
-                                <!-- Placeholder for profile image -->
-                                <div class="flex items-center justify-center h-full text-gray-400">
-                                    <span>Profile Image</span>
-                                </div>
-                            </div>
-                            <div class="w-full md:w-2/3">
-                                <h2 class="font-sample-playfair text-3xl font-semibold navy-text mb-3">About Zeshaan Qadir</h2>
-                                <div class="gold-accent"></div>
-                                <p class="font-sample-lato mb-4">With over a decade of experience in New York City's dynamic real estate market, I provide my clients with unparalleled service and market insight. I specialize in luxury properties across Manhattan and Brooklyn, with particular expertise in Tribeca, Chelsea, and Park Slope.</p>
-                                <p class="font-sample-lato mb-6">My approach combines deep market knowledge with personalized attention to each client's unique needs and goals.</p>
-                                <a href="#" class="btn-secondary">Learn More About My Approach</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mt-4">
-                        <p class="text-sm text-gray-600">This About section uses the white background for readability, Navy Blue for the headline text, the Gold accent line for visual interest, and the secondary button style for a less prominent CTA.</p>
-                    </div>
-                </div>
-                
-                <!-- Closed Transactions Example -->
-                <div class="sample-section">
-                    <h3 class="text-2xl font-medium mb-6 navy-text">Closed Transactions Example</h3>
-                    <div class="bg-gray-50 p-6 rounded-lg">
-                        <h2 class="font-sample-playfair text-3xl font-semibold navy-text text-center mb-3">Notable Transactions</h2>
-                        <div class="gold-accent mx-auto"></div>
-                        <p class="font-sample-lato text-center mb-8">A selection of recent luxury properties sold in NYC's most coveted neighborhoods.</p>
-                        
-                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                            <div class="bg-white rounded-lg overflow-hidden shadow-sm">
-                                <div class="bg-gray-200" style="height: 160px;">
-                                    <!-- Placeholder for property image -->
-                                </div>
-                                <div class="p-4">
-                                    <p class="text-sm gold-text font-semibold mb-1">TRIBECA</p>
-                                    <h3 class="font-sample-playfair text-xl navy-text font-semibold mb-2">443 Greenwich St</h3>
-                                    <p class="text-sm text-gray-600 mb-2">3 Bed · 3.5 Bath · 2,750 sq ft</p>
-                                    <p class="font-medium">$8.5M</p>
-                                </div>
-                            </div>
-                            
-                            <div class="bg-white rounded-lg overflow-hidden shadow-sm">
-                                <div class="bg-gray-200" style="height: 160px;">
-                                    <!-- Placeholder for property image -->
-                                </div>
-                                <div class="p-4">
-                                    <p class="text-sm gold-text font-semibold mb-1">CHELSEA</p>
-                                    <h3 class="font-sample-playfair text-xl navy-text font-semibold mb-2">520 West 28th St</h3>
-                                    <p class="text-sm text-gray-600 mb-2">2 Bed · 2.5 Bath · 2,100 sq ft</p>
-                                    <p class="font-medium">$6.25M</p>
-                                </div>
-                            </div>
-                            
-                            <div class="bg-white rounded-lg overflow-hidden shadow-sm">
-                                <div class="bg-gray-200" style="height: 160px;">
-                                    <!-- Placeholder for property image -->
-                                </div>
-                                <div class="p-4">
-                                    <p class="text-sm gold-text font-semibold mb-1">UPPER EAST SIDE</p>
-                                    <h3 class="font-sample-playfair text-xl navy-text font-semibold mb-2">21 East 61st St</h3>
-                                    <p class="text-sm text-gray-600 mb-2">4 Bed · 4.5 Bath · 3,500 sq ft</p>
-                                    <p class="font-medium">$12.8M</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mt-4">
-                        <p class="text-sm text-gray-600">This Closed Transactions section uses cards with white backgrounds on a light gray section background for subtle contrast. The Gold color highlights the neighborhood names, while Navy Blue is used for property names.</p>
-                    </div>
-                </div>
-                
-                <!-- Neighborhood Expertise Example -->
-                <div class="sample-section">
-                    <h3 class="text-2xl font-medium mb-6 navy-text">Neighborhood Expertise Example</h3>
-                    <div class="navy-bg text-white p-8 rounded-lg">
-                        <h2 class="font-sample-playfair text-3xl font-semibold text-center mb-3">NYC Neighborhood Expertise</h2>
-                        <div class="w-16 h-1 bg-gold-bg mx-auto mb-8"></div>
-                        
-                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                            <div class="bg-white bg-opacity-10 p-5 rounded-lg text-center hover:bg-opacity-20 transition-all">
-                                <div class="w-16 h-16 bg-gold-bg bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                                    <i class="fas fa-building text-gold-text text-2xl"></i>
-                                </div>
-                                <h3 class="text-xl font-semibold mb-2">Tribeca</h3>
-                                <p class="text-sm text-gray-200">Historic lofts and luxury new developments in one of NYC's most desirable neighborhoods.</p>
-                            </div>
-                            
-                            <div class="bg-white bg-opacity-10 p-5 rounded-lg text-center hover:bg-opacity-20 transition-all">
-                                <div class="w-16 h-16 bg-gold-bg bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                                    <i class="fas fa-tree text-gold-text text-2xl"></i>
-                                </div>
-                                <h3 class="text-xl font-semibold mb-2">Chelsea</h3>
-                                <p class="text-sm text-gray-200">Art galleries, the High Line, and stunning contemporary residences define this cultural hub.</p>
-                            </div>
-                            
-                            <div class="bg-white bg-opacity-10 p-5 rounded-lg text-center hover:bg-opacity-20 transition-all">
-                                <div class="w-16 h-16 bg-gold-bg bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                                    <i class="fas fa-landmark text-gold-text text-2xl"></i>
-                                </div>
-                                <h3 class="text-xl font-semibold mb-2">Upper East Side</h3>
-                                <p class="text-sm text-gray-200">Classic prewar cooperatives and luxury condominiums along Central Park and Museum Mile.</p>
-                            </div>
-                            
-                            <div class="bg-white bg-opacity-10 p-5 rounded-lg text-center hover:bg-opacity-20 transition-all">
-                                <div class="w-16 h-16 bg-gold-bg bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                                    <i class="fas fa-bridge text-gold-text text-2xl"></i>
-                                </div>
-                                <h3 class="text-xl font-semibold mb-2">Brooklyn Heights</h3>
-                                <p class="text-sm text-gray-200">Historic brownstones and waterfront condos with panoramic Manhattan views.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mt-4">
-                        <p class="text-sm text-gray-600">This Neighborhood Expertise section uses the Navy Blue background with white text for high contrast. Gold accents are used for icons and the decorative line, creating a luxurious feel.</p>
-                    </div>
-                </div>
-                
-                <!-- Testimonials Example -->
-                <div class="sample-section">
-                    <h3 class="text-2xl font-medium mb-6 navy-text">Testimonials Example</h3>
-                    <div class="bg-white p-6 rounded-lg">
-                        <h2 class="font-sample-playfair text-3xl font-semibold navy-text text-center mb-3">Client Testimonials</h2>
-                        <div class="gold-accent mx-auto mb-8"></div>
-                        
-                        <div class="testimonial-sample">
-                            <div class="pl-8">
-                                <p class="font-sample-lato italic mb-4">Zeshaan's market knowledge and negotiation skills are exceptional. He sold our Tribeca loft for well above asking price in just three weeks. His attention to detail and professional guidance made the entire process seamless.</p>
-                                <div class="gold-accent"></div>
-                                <p class="font-sample-playfair font-semibold">Jonathan & Sarah Miller</p>
-                                <p class="text-sm text-gray-600">Tribeca, Seller</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mt-4">
-                        <p class="text-sm text-gray-600">This Testimonial section uses a light gray background with the quote mark in Gold. The client names use Playfair Display font for elegance, with the Gold accent line separating the quote from the attribution.</p>
-                    </div>
-                </div>
-                
-                <!-- Contact Form Example -->
-                <div class="sample-section">
-                    <h3 class="text-2xl font-medium mb-6 navy-text">Contact Form Example</h3>
-                    <div class="navy-bg text-white p-8 rounded-lg">
-                        <h2 class="font-sample-playfair text-3xl font-semibold text-center mb-3">Let's Connect</h2>
-                        <div class="w-16 h-1 bg-gold-bg mx-auto mb-4"></div>
-                        <p class="text-center mb-8">I look forward to discussing your real estate needs and how I can assist you in achieving your goals.</p>
-                        
-                        <div class="bg-white rounded-lg p-6">
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                                <div>
-                                    <label for="contact-name" class="form-label text-gray-700">Name</label>
-                                    <input type="text" id="contact-name" class="form-input" placeholder="Full Name">
-                                </div>
-                                <div>
-                                    <label for="contact-email" class="form-label text-gray-700">Email</label>
-                                    <input type="email" id="contact-email" class="form-input" placeholder="email@example.com">
-                                </div>
-                            </div>
-                            
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                                <div>
-                                    <label for="contact-phone" class="form-label text-gray-700">Phone</label>
-                                    <input type="tel" id="contact-phone" class="form-input" placeholder="(123) 456-7890">
-                                </div>
-                                <div>
-                                    <label for="contact-type" class="form-label text-gray-700">Buyer or Seller</label>
-                                    <select id="contact-type" class="form-input">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="buyer">Buyer</option>
-                                        <option value="seller">Seller</option>
-                                        <option value="both">Both</option>
-                                    </select>
-                                </div>
-                            </div>
-                            
-                            <div class="mb-4">
-                                <label for="contact-message" class="form-label text-gray-700">Message (optional)</label>
-                                <textarea id="contact-message" class="form-input" rows="4" placeholder="Tell me about your real estate needs..."></textarea>
-                            </div>
-                            
-                            <button class="btn-primary w-full">Submit</button>
-                        </div>
-                    </div>
-                    <div class="mt-4">
-                        <p class="text-sm text-gray-600">This Contact Form section uses the Navy Blue background with white text for the heading and introduction. The form itself is on a white background for readability, with the Blood Orange button for the submission CTA.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-    
-    <footer class="navy-bg text-white py-8">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="font-sample-playfair text-2xl mb-2">Zeshaan Qadir</h2>
-            <p class="mb-6">Real Estate Brand Style Guide</p>
-            <div class="w-16 h-1 bg-gold-bg mx-auto mb-6"></div>
-            <p>Prepared by: Poppy Marketing & Consulting</p>
-            <p>Date: April 2025</p>
         </div>
-    </footer>
-    
-    <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/js/all.js"></script>
+
+        <!-- Footer Section -->
+        <div class="footer">
+            <p>© 2025 Poppy Marketing & Consulting. All Rights Reserved.</p>
+            <p style="margin-top: 10px;">Prepared exclusively for Zeshaan Qadir | April 2025</p>
+        </div>
+    </div>
 </body>
 </html>
