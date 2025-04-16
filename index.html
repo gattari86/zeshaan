@@ -1,20 +1,974 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cy's Minecraft Math Quest</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.cdnfonts.com/css/minecraft-4" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zeshaan Qadir Real Estate Brand Style Guide</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy-blue: #1A2B4A;
+            --gold: #D4AF36;
+            --blood-orange: #E4572E;
+            --teal: #2F4F4F;
+            --black: #000000;
+            --dark-gray: #333333;
+            --light-gray: #EEEEEE;
+            --white: #FFFFFF;
+        }
+        
+        body {
+            font-family: 'Lato', sans-serif;
+            color: var(--dark-gray);
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+        }
+        
+        .navy-bg { background-color: var(--navy-blue); }
+        .gold-bg { background-color: var(--gold); }
+        .blood-orange-bg { background-color: var(--blood-orange); }
+        .teal-bg { background-color: var(--teal); }
+        .black-bg { background-color: var(--black); }
+        .dark-gray-bg { background-color: var(--dark-gray); }
+        .light-gray-bg { background-color: var(--light-gray); }
+        .white-bg { background-color: var(--white); }
+        
+        .navy-text { color: var(--navy-blue); }
+        .gold-text { color: var(--gold); }
+        .blood-orange-text { color: var(--blood-orange); }
+        .teal-text { color: var(--teal); }
+        .black-text { color: var(--black); }
+        .dark-gray-text { color: var(--dark-gray); }
+        .light-gray-text { color: var(--light-gray); }
+        .white-text { color: var(--white); }
+        
+        .divider {
+            height: 1px;
+            background-color: var(--light-gray);
+            margin: 2rem 0;
+        }
+        
+        .color-swatch {
+            height: 100px;
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .color-swatch:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .btn-primary {
+            background-color: var(--blood-orange);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .btn-primary:hover {
+            background-color: #c24022;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--navy-blue);
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+            border: 2px solid var(--navy-blue);
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .btn-secondary:hover {
+            background-color: var(--navy-blue);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .btn-gold {
+            background-color: var(--gold);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .btn-gold:hover {
+            background-color: #b8992e;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .form-input {
+            display: block;
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid var(--light-gray);
+            border-radius: 4px;
+            margin-bottom: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .form-input:focus {
+            outline: none;
+            border-color: var(--navy-blue);
+            box-shadow: 0 0 0 2px rgba(26, 43, 74, 0.2);
+        }
+        
+        .form-label {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+        
+        .section-title {
+            position: relative;
+            padding-bottom: 0.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .section-title::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--gold);
+        }
+        
+        .sample-section {
+            border: 1px solid var(--light-gray);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .sample-section:hover {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .header-container {
+            background: linear-gradient(135deg, var(--navy-blue), #0a1427);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header-container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80');
+            background-size: cover;
+            opacity: 0.15;
+            mix-blend-mode: overlay;
+        }
+        
+        .font-sample-playfair {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .font-sample-lato {
+            font-family: 'Lato', sans-serif;
+        }
+        
+        .font-sample-opensans {
+            font-family: 'Open Sans', sans-serif;
+        }
+        
+        .typography-sample {
+            padding: 1.5rem;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            margin-bottom: 1rem;
+        }
+        
+        .gold-accent {
+            width: 50px;
+            height: 4px;
+            background-color: var(--gold);
+            margin: 1rem 0;
+        }
+        
+        .hero-sample {
+            height: 220px;
+            background: linear-gradient(rgba(26, 43, 74, 0.8), rgba(26, 43, 74, 0.8)), url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2673&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .testimonial-sample {
+            background-color: #f9f9f9;
+            padding: 2rem;
+            border-radius: 8px;
+            position: relative;
+        }
+        
+        .testimonial-sample::before {
+            content: """;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 4rem;
+            color: var(--gold);
+            font-family: 'Playfair Display', serif;
+            opacity: 0.3;
+        }
+        
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+        }
+        
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 250px;
+            background-color: var(--dark-gray);
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 10px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
 </head>
-<body>
-  <div class="game-container">
-    <h1>Cy’s Minecraft Math Quest</h1>
-    <div id="questionBox"></div>
-    <div id="choices"></div>
-    <div id="progress">Score: 0 / 15</div>
-    <div id="endScreen"></div>
-  </div>
-  <script src="script.js"></script>
+<body class="bg-white">
+    <header class="header-container py-16 px-8 relative">
+        <div class="container mx-auto relative z-10">
+            <div class="flex flex-col items-center text-center">
+                <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-4">Zeshaan Qadir</h1>
+                <div class="w-20 h-1 bg-gold-bg mb-6"></div>
+                <h2 class="text-2xl md:text-3xl mb-2">Real Estate Brand Style Guide</h2>
+                <p class="text-lg opacity-80">Prepared by: Poppy Marketing & Consulting</p>
+                <p class="text-md opacity-70">Date: April 2025</p>
+            </div>
+        </div>
+    </header>
+    
+    <main class="container mx-auto px-4 py-12">
+        <section class="mb-16">
+            <h2 class="section-title text-3xl navy-text">Visual & Style Direction</h2>
+            <div class="bg-gray-50 p-6 rounded-lg">
+                <h3 class="text-xl font-semibold mb-4">Design Goals</h3>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li>Sleek, modern, and elegant</li>
+                    <li>Reflective of NYC luxury and Zeshaan's professional personality</li>
+                    <li>Minimalist layout with strong visual impact (bold imagery, clean fonts)</li>
+                </ul>
+            </div>
+        </section>
+        
+        <div class="divider"></div>
+        
+        <section class="mb-16">
+            <h2 class="section-title text-3xl navy-text">Color Palette & Usage</h2>
+            
+            <h3 class="text-2xl font-medium mb-6 navy-text">Primary Colors</h3>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-10">
+                <div>
+                    <div class="color-swatch navy-bg" title="Navy Blue - #1A2B4A"></div>
+                    <h4 class="font-semibold text-lg">Navy Blue</h4>
+                    <p class="text-sm text-gray-700 mb-1">HEX: #1A2B4A</p>
+                    <p class="text-sm text-gray-600">Primary brand color for headers, hero sections, and footers</p>
+                </div>
+                
+                <div>
+                    <div class="color-swatch gold-bg" title="Gold - #D4AF36"></div>
+                    <h4 class="font-semibold text-lg">Gold</h4>
+                    <p class="text-sm text-gray-700 mb-1">HEX: #D4AF36</p>
+                    <p class="text-sm text-gray-600">Luxury accents, lines, icons, highlights</p>
+                </div>
+                
+                <div>
+                    <div class="color-swatch blood-orange-bg" title="Blood Orange - #E4572E"></div>
+                    <h4 class="font-semibold text-lg">Blood Orange</h4>
+                    <p class="text-sm text-gray-700 mb-1">HEX: #E4572E</p>
+                    <p class="text-sm text-gray-600">Buttons, links, CTAs</p>
+                </div>
+                
+                <div>
+                    <div class="color-swatch teal-bg" title="Teal - #2F4F4F"></div>
+                    <h4 class="font-semibold text-lg">Teal</h4>
+                    <p class="text-sm text-gray-700 mb-1">HEX: #2F4F4F</p>
+                    <p class="text-sm text-gray-600">Secondary accent sections or iconography</p>
+                </div>
+            </div>
+            
+            <h3 class="text-2xl font-medium mb-6 navy-text">Neutral Colors</h3>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div>
+                    <div class="color-swatch black-bg" title="Black - #000000"></div>
+                    <h4 class="font-semibold text-lg">Black</h4>
+                    <p class="text-sm text-gray-700 mb-1">HEX: #000000</p>
+                    <p class="text-sm text-gray-600">Primary text and contrast accents</p>
+                </div>
+                
+                <div>
+                    <div class="color-swatch dark-gray-bg" title="Dark Gray - #333333"></div>
+                    <h4 class="font-semibold text-lg">Dark Gray</h4>
+                    <p class="text-sm text-gray-700 mb-1">HEX: #333333</p>
+                    <p class="text-sm text-gray-600">Body text and muted backgrounds</p>
+                </div>
+                
+                <div>
+                    <div class="color-swatch light-gray-bg" title="Light Gray - #EEEEEE"></div>
+                    <h4 class="font-semibold text-lg">Light Gray</h4>
+                    <p class="text-sm text-gray-700 mb-1">HEX: #EEEEEE</p>
+                    <p class="text-sm text-gray-600">Dividers, form backgrounds</p>
+                </div>
+                
+                <div>
+                    <div class="color-swatch white-bg border" title="White - #FFFFFF"></div>
+                    <h4 class="font-semibold text-lg">White</h4>
+                    <p class="text-sm text-gray-700 mb-1">HEX: #FFFFFF</p>
+                    <p class="text-sm text-gray-600">Backgrounds, clean content areas</p>
+                </div>
+            </div>
+            
+            <div class="mt-10 bg-gray-50 p-6 rounded-lg">
+                <h3 class="text-xl font-semibold mb-4">Color Usage Guidelines</h3>
+                <ul class="list-disc pl-6 space-y-3">
+                    <li><span class="navy-text font-semibold">Navy Blue</span> should be the dominant brand color, used for key elements like navigation, headers, and important section backgrounds.</li>
+                    <li><span class="gold-text font-semibold">Gold</span> should be used sparingly as an accent to highlight luxury aspects and create visual interest points.</li>
+                    <li><span class="blood-orange-text font-semibold">Blood Orange</span> creates dynamic contrast and should be reserved primarily for action items and interactive elements.</li>
+                    <li><span class="teal-text font-semibold">Teal</span> can be used for secondary sections or supporting elements that require distinction without competing with primary colors.</li>
+                    <li>Maintain appropriate color contrast ratios for accessibility, particularly with text elements.</li>
+                </ul>
+            </div>
+        </section>
+        
+        <div class="divider"></div>
+        
+        <section class="mb-16">
+            <h2 class="section-title text-3xl navy-text">Typography</h2>
+            <p class="mb-8">The typography selection balances elegant refinement with modern readability, perfect for luxury real estate.</p>
+            
+            <h3 class="text-2xl font-medium mb-6 navy-text">Headlines</h3>
+            <div class="typography-sample">
+                <p class="text-sm text-gray-500 mb-2">Font: Playfair Display (Serif)</p>
+                <div class="space-y-4">
+                    <div>
+                        <h1 class="font-sample-playfair text-4xl font-bold">Headline Level 1</h1>
+                        <p class="text-sm text-gray-600 mt-1">Used for main page titles and hero section headers</p>
+                    </div>
+                    <div>
+                        <h2 class="font-sample-playfair text-3xl font-semibold">Headline Level 2</h2>
+                        <p class="text-sm text-gray-600 mt-1">Used for section headers and featured content</p>
+                    </div>
+                    <div>
+                        <h3 class="font-sample-playfair text-2xl font-medium">Headline Level 3</h3>
+                        <p class="text-sm text-gray-600 mt-1">Used for subsections and important callouts</p>
+                    </div>
+                    <div>
+                        <h4 class="font-sample-playfair text-xl font-medium">Headline Level 4</h4>
+                        <p class="text-sm text-gray-600 mt-1">Used for minor section headers</p>
+                    </div>
+                </div>
+            </div>
+            
+            <h3 class="text-2xl font-medium mb-6 mt-10 navy-text">Body Copy</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="typography-sample">
+                    <p class="text-sm text-gray-500 mb-2">Primary: Lato (Sans-Serif)</p>
+                    <p class="font-sample-lato text-base">Lato offers exceptional readability with a modern, professional appearance. Its clean lines and subtle curves convey sophistication while maintaining excellent legibility across all screen sizes and devices.</p>
+                    <div class="mt-4">
+                        <p class="font-sample-lato text-base font-normal">Regular weight paragraph text</p>
+                        <p class="font-sample-lato text-base font-semibold mt-2">Semibold text for emphasis</p>
+                        <p class="font-sample-lato text-sm text-gray-600 mt-2">Small text for captions and notes</p>
+                    </div>
+                </div>
+                
+                <div class="typography-sample">
+                    <p class="text-sm text-gray-500 mb-2">Alternative: Open Sans (Sans-Serif)</p>
+                    <p class="font-sample-opensans text-base">Open Sans provides excellent readability with a friendly, professional character. Its neutral appearance makes it versatile while remaining highly legible across digital platforms and print materials.</p>
+                    <div class="mt-4">
+                        <p class="font-sample-opensans text-base font-normal">Regular weight paragraph text</p>
+                        <p class="font-sample-opensans text-base font-semibold mt-2">Semibold text for emphasis</p>
+                        <p class="font-sample-opensans text-sm text-gray-600 mt-2">Small text for captions and notes</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-10 bg-gray-50 p-6 rounded-lg">
+                <h3 class="text-xl font-semibold mb-4">Typography Guidelines</h3>
+                <ul class="list-disc pl-6 space-y-3">
+                    <li>Maintain hierarchy clarity by using proper font sizes and weights consistently</li>
+                    <li>Body text should be set at 16px minimum for optimal readability</li>
+                    <li>Line height should be approximately 1.5-1.6 times the font size for body text</li>
+                    <li>Limit use of italic styles except for specific emphasis needs</li>
+                    <li>Ensure sufficient contrast between text and background colors</li>
+                    <li>Use lighter font weights for larger display text, and medium to semibold weights for smaller text</li>
+                </ul>
+            </div>
+        </section>
+        
+        <div class="divider"></div>
+        
+        <section class="mb-16">
+            <h2 class="section-title text-3xl navy-text">Tone of Voice</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-2xl font-medium mb-4 navy-text">Brand Voice Attributes</h3>
+                    <ul class="list-disc pl-6 space-y-3">
+                        <li><span class="font-semibold">Professional, but warm and personal</span> - Conveys expertise while remaining approachable</li>
+                        <li><span class="font-semibold">Knowledgeable and approachable</span> - Demonstrates market insight without overwhelming jargon</li>
+                        <li><span class="font-semibold">Discreet, efficient, and client-first</span> - Emphasizes service quality and respect for client privacy</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-2xl font-medium mb-4 navy-text">Brand Voice Examples</h3>
+                    <div class="space-y-6">
+                        <div class="p-4 border-l-4 border-gold-bg">
+                            <p class="font-medium text-lg mb-1">"Let's Connect"</p>
+                            <p class="text-gray-600">Inviting yet professional call-to-action</p>
+                        </div>
+                        <div class="p-4 border-l-4 border-gold-bg">
+                            <p class="font-medium text-lg mb-1">"NYC Real Estate, Refined"</p>
+                            <p class="text-gray-600">Concise tagline conveying sophistication</p>
+                        </div>
+                        <div class="p-4 border-l-4 border-gold-bg">
+                            <p class="font-medium text-lg mb-1">"Efficiency. Discretion. Results."</p>
+                            <p class="text-gray-600">Crisp value proposition highlighting client benefits</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-10 bg-gray-50 p-6 rounded-lg">
+                <h3 class="text-xl font-semibold mb-4">Communication Guidelines</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <h4 class="text-lg font-medium mb-3 navy-text">Do</h4>
+                        <ul class="list-disc pl-6 space-y-2">
+                            <li>Use concise, direct language that respects the reader's time</li>
+                            <li>Balance professionalism with warmth and accessibility</li>
+                            <li>Emphasize client benefits rather than features</li>
+                            <li>Be specific about NYC neighborhoods and market knowledge</li>
+                            <li>Maintain a consistent voice across all touchpoints</li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-lg font-medium mb-3 navy-text">Don't</h4>
+                        <ul class="list-disc pl-6 space-y-2">
+                            <li>Use excessive jargon or technical terms without explanation</li>
+                            <li>Adopt an overly casual or informal tone</li>
+                            <li>Make exaggerated claims or use hyperbole</li>
+                            <li>Use generic messaging that could apply to any real estate brand</li>
+                            <li>Sacrifice clarity for cleverness</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <div class="divider"></div>
+        
+        <section class="mb-16">
+            <h2 class="section-title text-3xl navy-text">Buttons & CTA Styling</h2>
+            
+            <h3 class="text-2xl font-medium mb-6 navy-text">Primary Buttons</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+                <div class="p-6 bg-gray-50 rounded-lg">
+                    <h4 class="text-lg font-medium mb-4">Blood Orange Button (Default)</h4>
+                    <div class="flex flex-col items-start space-y-6">
+                        <a href="#" class="btn-primary">Let's Connect</a>
+                        <div class="text-sm text-gray-600">
+                            <p><strong>Usage:</strong> Primary calls-to-action, most important conversion points</p>
+                            <p class="mt-2"><strong>Styling:</strong></p>
+                            <ul class="list-disc pl-6 mt-1 space-y-1">
+                                <li>Background: Blood Orange (#E4572E)</li>
+                                <li>Text: White (#FFFFFF)</li>
+                                <li>Border radius: 4px</li>
+                                <li>Padding: 0.75rem 1.5rem</li>
+                                <li>Font weight: 600 (semibold)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="p-6 bg-gray-50 rounded-lg">
+                    <h4 class="text-lg font-medium mb-4">Gold Button (Alternative)</h4>
+                    <div class="flex flex-col items-start space-y-6">
+                        <a href="#" class="btn-gold">Schedule a Call</a>
+                        <div class="text-sm text-gray-600">
+                            <p><strong>Usage:</strong> Premium or featured actions, highlighting luxury aspects</p>
+                            <p class="mt-2"><strong>Styling:</strong></p>
+                            <ul class="list-disc pl-6 mt-1 space-y-1">
+                                <li>Background: Gold (#D4AF36)</li>
+                                <li>Text: White (#FFFFFF)</li>
+                                <li>Border radius: 4px</li>
+                                <li>Padding: 0.75rem 1.5rem</li>
+                                <li>Font weight: 600 (semibold)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <h3 class="text-2xl font-medium mb-6 navy-text">Secondary Buttons</h3>
+            <div class="p-6 bg-gray-50 rounded-lg mb-10">
+                <h4 class="text-lg font-medium mb-4">Outline Button</h4>
+                <div class="flex flex-col items-start space-y-6">
+                    <a href="#" class="btn-secondary">Explore My Listings</a>
+                    <div class="text-sm text-gray-600">
+                        <p><strong>Usage:</strong> Secondary actions, less prominent CTAs, alternative choices</p>
+                        <p class="mt-2"><strong>Styling:</strong></p>
+                        <ul class="list-disc pl-6 mt-1 space-y-1">
+                            <li>Background: Transparent</li>
+                            <li>Text: Navy Blue (#1A2B4A)</li>
+                            <li>Border: 2px solid Navy Blue (#1A2B4A)</li>
+                            <li>Border radius: 4px</li>
+                            <li>Padding: 0.75rem 1.5rem</li>
+                            <li>Font weight: 600 (semibold)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <h3 class="text-2xl font-medium mb-6 navy-text">Button States</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="p-6 bg-gray-50 rounded-lg">
+                    <h4 class="text-lg font-medium mb-4">Default</h4>
+                    <a href="#" class="btn-primary">Default State</a>
+                </div>
+                
+                <div class="p-6 bg-gray-50 rounded-lg">
+                    <h4 class="text-lg font-medium mb-4">Hover</h4>
+                    <div class="relative">
+                        <a href="#" class="btn-primary" style="background-color: #c24022;">Hover State</a>
+                        <p class="text-sm text-gray-500 mt-3">Color darkens slightly and button elevates with subtle shadow</p>
+                    </div>
+                </div>
+                
+                <div class="p-6 bg-gray-50 rounded-lg">
+                    <h4 class="text-lg font-medium mb-4">Disabled</h4>
+                    <a href="#" class="btn-primary opacity-50 cursor-not-allowed" style="pointer-events: none;">Disabled State</a>
+                    <p class="text-sm text-gray-500 mt-3">50% opacity, no hover effects</p>
+                </div>
+            </div>
+            
+            <div class="mt-10 bg-gray-50 p-6 rounded-lg">
+                <h3 class="text-xl font-semibold mb-4">CTA Examples</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="p-4 border border-light-gray rounded-lg text-center">
+                        <p class="font-medium navy-text">Let's Connect</p>
+                        <p class="text-sm text-gray-600 mt-2">For primary contact buttons</p>
+                    </div>
+                    <div class="p-4 border border-light-gray rounded-lg text-center">
+                        <p class="font-medium navy-text">Schedule a Call</p>
+                        <p class="text-sm text-gray-600 mt-2">For booking appointments</p>
+                    </div>
+                    <div class="p-4 border border-light-gray rounded-lg text-center">
+                        <p class="font-medium navy-text">Explore My Listings</p>
+                        <p class="text-sm text-gray-600 mt-2">For property showcases</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <div class="divider"></div>
+        
+        <section class="mb-16">
+            <h2 class="section-title text-3xl navy-text">Contact Form Field Requirements</h2>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                <div>
+                    <h3 class="text-2xl font-medium mb-6 navy-text">Form Fields</h3>
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <div class="mb-4">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" id="name" class="form-input" placeholder="Full Name">
+                            <p class="text-sm text-gray-500">Short text field</p>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" id="email" class="form-input" placeholder="email@example.com">
+                            <p class="text-sm text-gray-500">Email field with validation</p>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="phone" class="form-label">Phone</label>
+                            <input type="tel" id="phone" class="form-input" placeholder="(123) 456-7890">
+                            <p class="text-sm text-gray-500">Numeric/text field</p>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="type" class="form-label">Buyer or Seller</label>
+                            <select id="type" class="form-input">
+                                <option value="" disabled selected>Select Option</option>
+                                <option value="buyer">Buyer</option>
+                                <option value="seller">Seller</option>
+                                <option value="both">Both</option>
+                            </select>
+                            <p class="text-sm text-gray-500">Dropdown or radio buttons</p>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="budget" class="form-label">Budget Range</label>
+                            <select id="budget" class="form-input">
+                                <option value="" disabled selected>Select Budget Range</option>
+                                <option value="range1">Under $500,000</option>
+                                <option value="range2">$500,000 - $1,000,000</option>
+                                <option value="range3">$1,000,000 - $2,000,000</option>
+                                <option value="range4">$2,000,000 - $5,000,000</option>
+                                <option value="range5">$5,000,000+</option>
+                            </select>
+                            <p class="text-sm text-gray-500">Dropdown with preset ranges</p>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="prequalified" class="form-label">Pre-qualified?</label>
+                            <div class="flex items-center space-x-4 mt-2">
+                                <label class="inline-flex items-center">
+                                    <input type="radio" name="prequalified" value="yes" class="mr-2">
+                                    <span>Yes</span>
+                                </label>
+                                <label class="inline-flex items-center">
+                                    <input type="radio" name="prequalified" value="no" class="mr-2">
+                                    <span>No</span>
+                                </label>
+                            </div>
+                            <p class="text-sm text-gray-500">Yes/No toggle or checkbox</p>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="contact-method" class="form-label">Preferred Contact Method</label>
+                            <select id="contact-method" class="form-input">
+                                <option value="" disabled selected>Select Contact Method</option>
+                                <option value="call">Call</option>
+                                <option value="text">Text</option>
+                                <option value="email">Email</option>
+                            </select>
+                            <p class="text-sm text-gray-500">Dropdown selection</p>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="message" class="form-label">Message (optional)</label>
+                            <textarea id="message" class="form-input" rows="4" placeholder="Tell us more about what you're looking for..."></textarea>
+                            <p class="text-sm text-gray-500">Multi-line text box</p>
+                        </div>
+                        
+                        <button class="btn-primary w-full">Submit</button>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-2xl font-medium mb-6 navy-text">Form Styling Guidelines</h3>
+                    
+                    <div class="bg-gray-50 p-6 rounded-lg mb-8">
+                        <h4 class="text-lg font-medium mb-4">Form Element Styling</h4>
+                        <ul class="list-disc pl-6 space-y-3">
+                            <li><strong>Input fields:</strong> Clean borders (1px), subtle border-radius (4px), generous padding for touch targets</li>
+                            <li><strong>Labels:</strong> Clear, concise text positioned above inputs, semibold weight for visibility</li>
+                            <li><strong>Focus states:</strong> Subtle border color change to Navy Blue with light box shadow</li>
+                            <li><strong>Error states:</strong> Light red background, red border, with inline error message</li>
+                            <li><strong>Success confirmation:</strong> Subtle animation and color change to indicate successful submission</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <h4 class="text-lg font-medium mb-4">Form Behavior Best Practices</h4>
+                        <ul class="list-disc pl-6 space-y-3">
+                            <li>Implement inline validation to provide immediate feedback</li>
+                            <li>Use proper input types for mobile optimization (email, tel, etc.)</li>
+                            <li>Keep form length minimal while capturing essential information</li>
+                            <li>Clearly mark required vs. optional fields</li>
+                            <li>Provide helpful placeholder text that doesn't replace labels</li>
+                            <li>Ensure form is fully accessible with proper ARIA attributes</li>
+                            <li>Implement responsive design to maintain usability across all devices</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mt-8 p-5 border-l-4 border-blood-orange-bg bg-gray-50">
+                        <h4 class="text-lg font-medium mb-2">Form Submission</h4>
+                        <p>After submission, users should receive:</p>
+                        <ul class="list-disc pl-6 mt-3 space-y-2">
+                            <li>Immediate visual confirmation of successful submission</li>
+                            <li>A thank you message with expectations for follow-up</li>
+                            <li>Automatic email confirmation sent to their provided email</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <div class="divider"></div>
+        
+        <section class="mb-16">
+            <h2 class="section-title text-3xl navy-text">Sample Layout Context</h2>
+            <p class="mb-8 text-gray-700">The following examples demonstrate how brand elements (color, typography, tone, buttons) can be applied in different website sections.</p>
+            
+            <div class="space-y-10">
+                <!-- Hero Section Example -->
+                <div class="sample-section">
+                    <h3 class="text-2xl font-medium mb-6 navy-text">Hero Section Example</h3>
+                    <div class="hero-sample">
+                        <div class="text-center p-6">
+                            <h1 class="font-sample-playfair text-4xl font-bold mb-2">NYC Luxury Real Estate</h1>
+                            <div class="w-16 h-1 bg-gold-bg mx-auto mb-4"></div>
+                            <p class="font-sample-lato text-lg mb-4">Discretion. Expertise. Results.</p>
+                            <a href="#" class="btn-primary">Let's Connect</a>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <p class="text-sm text-gray-600">This hero section employs the Navy Blue background with a subtle luxury property image overlay, Gold accent line, Playfair Display for the headline, and the primary Blood Orange CTA button.</p>
+                    </div>
+                </div>
+                
+                <!-- About Section Example -->
+                <div class="sample-section">
+                    <h3 class="text-2xl font-medium mb-6 navy-text">About Zeshaan Section Example</h3>
+                    <div class="bg-white p-6 rounded-lg">
+                        <div class="flex flex-col md:flex-row gap-8">
+                            <div class="w-full md:w-1/3 bg-gray-200 rounded-lg" style="height: 200px;">
+                                <!-- Placeholder for profile image -->
+                                <div class="flex items-center justify-center h-full text-gray-400">
+                                    <span>Profile Image</span>
+                                </div>
+                            </div>
+                            <div class="w-full md:w-2/3">
+                                <h2 class="font-sample-playfair text-3xl font-semibold navy-text mb-3">About Zeshaan Qadir</h2>
+                                <div class="gold-accent"></div>
+                                <p class="font-sample-lato mb-4">With over a decade of experience in New York City's dynamic real estate market, I provide my clients with unparalleled service and market insight. I specialize in luxury properties across Manhattan and Brooklyn, with particular expertise in Tribeca, Chelsea, and Park Slope.</p>
+                                <p class="font-sample-lato mb-6">My approach combines deep market knowledge with personalized attention to each client's unique needs and goals.</p>
+                                <a href="#" class="btn-secondary">Learn More About My Approach</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <p class="text-sm text-gray-600">This About section uses the white background for readability, Navy Blue for the headline text, the Gold accent line for visual interest, and the secondary button style for a less prominent CTA.</p>
+                    </div>
+                </div>
+                
+                <!-- Closed Transactions Example -->
+                <div class="sample-section">
+                    <h3 class="text-2xl font-medium mb-6 navy-text">Closed Transactions Example</h3>
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <h2 class="font-sample-playfair text-3xl font-semibold navy-text text-center mb-3">Notable Transactions</h2>
+                        <div class="gold-accent mx-auto"></div>
+                        <p class="font-sample-lato text-center mb-8">A selection of recent luxury properties sold in NYC's most coveted neighborhoods.</p>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div class="bg-white rounded-lg overflow-hidden shadow-sm">
+                                <div class="bg-gray-200" style="height: 160px;">
+                                    <!-- Placeholder for property image -->
+                                </div>
+                                <div class="p-4">
+                                    <p class="text-sm gold-text font-semibold mb-1">TRIBECA</p>
+                                    <h3 class="font-sample-playfair text-xl navy-text font-semibold mb-2">443 Greenwich St</h3>
+                                    <p class="text-sm text-gray-600 mb-2">3 Bed · 3.5 Bath · 2,750 sq ft</p>
+                                    <p class="font-medium">$8.5M</p>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-white rounded-lg overflow-hidden shadow-sm">
+                                <div class="bg-gray-200" style="height: 160px;">
+                                    <!-- Placeholder for property image -->
+                                </div>
+                                <div class="p-4">
+                                    <p class="text-sm gold-text font-semibold mb-1">CHELSEA</p>
+                                    <h3 class="font-sample-playfair text-xl navy-text font-semibold mb-2">520 West 28th St</h3>
+                                    <p class="text-sm text-gray-600 mb-2">2 Bed · 2.5 Bath · 2,100 sq ft</p>
+                                    <p class="font-medium">$6.25M</p>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-white rounded-lg overflow-hidden shadow-sm">
+                                <div class="bg-gray-200" style="height: 160px;">
+                                    <!-- Placeholder for property image -->
+                                </div>
+                                <div class="p-4">
+                                    <p class="text-sm gold-text font-semibold mb-1">UPPER EAST SIDE</p>
+                                    <h3 class="font-sample-playfair text-xl navy-text font-semibold mb-2">21 East 61st St</h3>
+                                    <p class="text-sm text-gray-600 mb-2">4 Bed · 4.5 Bath · 3,500 sq ft</p>
+                                    <p class="font-medium">$12.8M</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <p class="text-sm text-gray-600">This Closed Transactions section uses cards with white backgrounds on a light gray section background for subtle contrast. The Gold color highlights the neighborhood names, while Navy Blue is used for property names.</p>
+                    </div>
+                </div>
+                
+                <!-- Neighborhood Expertise Example -->
+                <div class="sample-section">
+                    <h3 class="text-2xl font-medium mb-6 navy-text">Neighborhood Expertise Example</h3>
+                    <div class="navy-bg text-white p-8 rounded-lg">
+                        <h2 class="font-sample-playfair text-3xl font-semibold text-center mb-3">NYC Neighborhood Expertise</h2>
+                        <div class="w-16 h-1 bg-gold-bg mx-auto mb-8"></div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                            <div class="bg-white bg-opacity-10 p-5 rounded-lg text-center hover:bg-opacity-20 transition-all">
+                                <div class="w-16 h-16 bg-gold-bg bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                                    <i class="fas fa-building text-gold-text text-2xl"></i>
+                                </div>
+                                <h3 class="text-xl font-semibold mb-2">Tribeca</h3>
+                                <p class="text-sm text-gray-200">Historic lofts and luxury new developments in one of NYC's most desirable neighborhoods.</p>
+                            </div>
+                            
+                            <div class="bg-white bg-opacity-10 p-5 rounded-lg text-center hover:bg-opacity-20 transition-all">
+                                <div class="w-16 h-16 bg-gold-bg bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                                    <i class="fas fa-tree text-gold-text text-2xl"></i>
+                                </div>
+                                <h3 class="text-xl font-semibold mb-2">Chelsea</h3>
+                                <p class="text-sm text-gray-200">Art galleries, the High Line, and stunning contemporary residences define this cultural hub.</p>
+                            </div>
+                            
+                            <div class="bg-white bg-opacity-10 p-5 rounded-lg text-center hover:bg-opacity-20 transition-all">
+                                <div class="w-16 h-16 bg-gold-bg bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                                    <i class="fas fa-landmark text-gold-text text-2xl"></i>
+                                </div>
+                                <h3 class="text-xl font-semibold mb-2">Upper East Side</h3>
+                                <p class="text-sm text-gray-200">Classic prewar cooperatives and luxury condominiums along Central Park and Museum Mile.</p>
+                            </div>
+                            
+                            <div class="bg-white bg-opacity-10 p-5 rounded-lg text-center hover:bg-opacity-20 transition-all">
+                                <div class="w-16 h-16 bg-gold-bg bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                                    <i class="fas fa-bridge text-gold-text text-2xl"></i>
+                                </div>
+                                <h3 class="text-xl font-semibold mb-2">Brooklyn Heights</h3>
+                                <p class="text-sm text-gray-200">Historic brownstones and waterfront condos with panoramic Manhattan views.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <p class="text-sm text-gray-600">This Neighborhood Expertise section uses the Navy Blue background with white text for high contrast. Gold accents are used for icons and the decorative line, creating a luxurious feel.</p>
+                    </div>
+                </div>
+                
+                <!-- Testimonials Example -->
+                <div class="sample-section">
+                    <h3 class="text-2xl font-medium mb-6 navy-text">Testimonials Example</h3>
+                    <div class="bg-white p-6 rounded-lg">
+                        <h2 class="font-sample-playfair text-3xl font-semibold navy-text text-center mb-3">Client Testimonials</h2>
+                        <div class="gold-accent mx-auto mb-8"></div>
+                        
+                        <div class="testimonial-sample">
+                            <div class="pl-8">
+                                <p class="font-sample-lato italic mb-4">Zeshaan's market knowledge and negotiation skills are exceptional. He sold our Tribeca loft for well above asking price in just three weeks. His attention to detail and professional guidance made the entire process seamless.</p>
+                                <div class="gold-accent"></div>
+                                <p class="font-sample-playfair font-semibold">Jonathan & Sarah Miller</p>
+                                <p class="text-sm text-gray-600">Tribeca, Seller</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <p class="text-sm text-gray-600">This Testimonial section uses a light gray background with the quote mark in Gold. The client names use Playfair Display font for elegance, with the Gold accent line separating the quote from the attribution.</p>
+                    </div>
+                </div>
+                
+                <!-- Contact Form Example -->
+                <div class="sample-section">
+                    <h3 class="text-2xl font-medium mb-6 navy-text">Contact Form Example</h3>
+                    <div class="navy-bg text-white p-8 rounded-lg">
+                        <h2 class="font-sample-playfair text-3xl font-semibold text-center mb-3">Let's Connect</h2>
+                        <div class="w-16 h-1 bg-gold-bg mx-auto mb-4"></div>
+                        <p class="text-center mb-8">I look forward to discussing your real estate needs and how I can assist you in achieving your goals.</p>
+                        
+                        <div class="bg-white rounded-lg p-6">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                                <div>
+                                    <label for="contact-name" class="form-label text-gray-700">Name</label>
+                                    <input type="text" id="contact-name" class="form-input" placeholder="Full Name">
+                                </div>
+                                <div>
+                                    <label for="contact-email" class="form-label text-gray-700">Email</label>
+                                    <input type="email" id="contact-email" class="form-input" placeholder="email@example.com">
+                                </div>
+                            </div>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                                <div>
+                                    <label for="contact-phone" class="form-label text-gray-700">Phone</label>
+                                    <input type="tel" id="contact-phone" class="form-input" placeholder="(123) 456-7890">
+                                </div>
+                                <div>
+                                    <label for="contact-type" class="form-label text-gray-700">Buyer or Seller</label>
+                                    <select id="contact-type" class="form-input">
+                                        <option value="" disabled selected>Select Option</option>
+                                        <option value="buyer">Buyer</option>
+                                        <option value="seller">Seller</option>
+                                        <option value="both">Both</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label for="contact-message" class="form-label text-gray-700">Message (optional)</label>
+                                <textarea id="contact-message" class="form-input" rows="4" placeholder="Tell me about your real estate needs..."></textarea>
+                            </div>
+                            
+                            <button class="btn-primary w-full">Submit</button>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <p class="text-sm text-gray-600">This Contact Form section uses the Navy Blue background with white text for the heading and introduction. The form itself is on a white background for readability, with the Blood Orange button for the submission CTA.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="navy-bg text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="font-sample-playfair text-2xl mb-2">Zeshaan Qadir</h2>
+            <p class="mb-6">Real Estate Brand Style Guide</p>
+            <div class="w-16 h-1 bg-gold-bg mx-auto mb-6"></div>
+            <p>Prepared by: Poppy Marketing & Consulting</p>
+            <p>Date: April 2025</p>
+        </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/js/all.js"></script>
 </body>
 </html>
